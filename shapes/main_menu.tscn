@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://oy31ip0bvx8u"]
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.9496, 16.4533)
+color = Color(0.886262, 0.886261, 0.886262, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 225.0
+offset_top = 87.0
+offset_right = 299.0
+offset_bottom = 115.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "SHAPES"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 490.0
+offset_top = 395.0
+offset_right = 571.0
+offset_bottom = 496.0
+scale = Vector2(2.11565, 2.4456)
+
+[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "START"
+
+[node name="Button2" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "Optionen"
+
+[node name="Button3" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "ENDE"
