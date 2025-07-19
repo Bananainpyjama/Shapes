@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://oy31ip0bvx8u"]
+[gd_scene load_steps=3 format=3 uid="uid://oy31ip0bvx8u"]
 
 [ext_resource type="FontFile" uid="uid://cx6i0qv7bwtwh" path="res://assets/Games.ttf" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://dpwa48rd5s8b" path="res://main_menu.gd" id="1_7vrkn"]
 
 [node name="MainMenu" type="Node2D"]
+script = ExtResource("1_7vrkn")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -29,17 +31,21 @@ offset_right = 571.0
 offset_bottom = 496.0
 scale = Vector2(2.11565, 2.4456)
 
-[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer"]
+[node name="Start" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "START"
 
-[node name="Button2" type="Button" parent="CanvasLayer/VBoxContainer"]
+[node name="Option" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 text = "Optionen"
 
-[node name="Button3" type="Button" parent="CanvasLayer/VBoxContainer"]
+[node name="Ende" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 text = "ENDE"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Option" to="." method="_on_option_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Ende" to="." method="_on_ende_pressed"]
