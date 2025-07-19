@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bw8a2amchbk75"]
+
+[ext_resource type="Script" uid="uid://dp3w2t2q8r71w" path="res://projectile.gd" id="1_a85iw"]
+[ext_resource type="Script" uid="uid://csplf44724uho" path="res://MyHitbox.gd" id="2_qxf0c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxf0c"]
+size = Vector2(48, 48)
+
+[node name="Projectile" type="Node2D"]
+script = ExtResource("1_a85iw")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="MyHitbox" type="Area2D" parent="."]
+script = ExtResource("2_qxf0c")
+stagger = 1000
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MyHitbox"]
+shape = SubResource("RectangleShape2D_qxf0c")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -24.0
+offset_top = -24.0
+offset_right = 24.0
+offset_bottom = 24.0
+color = Color(0.508871, 0.511517, 0.306863, 1)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

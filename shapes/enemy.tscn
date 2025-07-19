@@ -1,6 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://cjlegbe18xe4n"]
+[gd_scene load_steps=3 format=3 uid="uid://cjlegbe18xe4n"]
 
 [ext_resource type="Script" uid="uid://bxarsmjxu6adw" path="res://enemy.gd" id="1_7k104"]
+[ext_resource type="Script" uid="uid://5wgl0pubpksg" path="res://MyHurtbox.gd" id="2_4gyqm"]
 
-[node name="Enemy" type="Node2D"]
+[node name="Enemy" type="RigidBody2D"]
+freeze_mode = 1
+linear_damp_mode = 1
+linear_damp = 0.5
 script = ExtResource("1_7k104")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+
+[node name="MyHurtbox" type="Area2D" parent="."]
+script = ExtResource("2_4gyqm")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MyHurtbox"]
