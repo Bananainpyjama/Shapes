@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://lib5oy5xy3uf"]
+[gd_scene load_steps=4 format=3 uid="uid://lib5oy5xy3uf"]
 
 [ext_resource type="Script" uid="uid://brg1177lacglw" path="res://lvl_1.gd" id="1_6mpcb"]
+[ext_resource type="Script" uid="uid://b0dxl81wo0rpv" path="res://addons/dialogic/Editor/dialogic_editor.gd" id="3_jschv"]
+[ext_resource type="Texture2D" uid="uid://bmqd0qxvpxqig" path="res://assets/level1.png" id="3_okdh5"]
 
 [node name="lvl1" type="Node2D"]
 script = ExtResource("1_6mpcb")
@@ -12,14 +14,20 @@ text = "DAS IST LEVEL1"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
-offset_left = 426.0
-offset_top = 231.0
-offset_right = 466.0
-offset_bottom = 271.0
-scale = Vector2(7.32746, 5.3372)
+[node name="Node2D" type="Node2D" parent="."]
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/PanelContainer"]
-layout_mode = 2
-text = "Willkommen bei Shapes 
-Schieße "
+[node name="DialogicEditor" type="Control" parent="Node2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 65.0
+offset_top = 154.0
+offset_right = 105.0
+offset_bottom = 194.0
+scale = Vector2(5.59302, 3.60274)
+script = ExtResource("3_jschv")
+metadata/_custom_type_script = "uid://b0dxl81wo0rpv"
+
+[node name="Level1" type="Sprite2D" parent="."]
+position = Vector2(577, 325)
+scale = Vector2(0.192573, 0.192573)
+texture = ExtResource("3_okdh5")
