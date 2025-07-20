@@ -22,6 +22,7 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"charactertest": "res://assets/charactertest.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
@@ -30,7 +31,7 @@ directories/dtl_directory={
 "timelinelvl2": "res://assets/timelinelvl2.dtl"
 }
 variables={}
-layout/style_list=["", "res://assets/CustomFontsize/fontsize.tres"]
+layout/style_list=["res://assets/CustomFontsize/fontsize.tres"]
 layout/default_style=""
 glossary/default_case_sensitive=true
 extensions_folder="res://addons/dialogic_additions"

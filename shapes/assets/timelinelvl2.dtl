@@ -1,5 +1,7 @@
 [wait time="1.0"]
 This is level 2. \
 Let´s see how you manage to do two shapes in time.
-[style]
+[style name="fontsize 2"]
+3
+2
 1

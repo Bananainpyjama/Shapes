@@ -116,7 +116,6 @@ physics_material_override = SubResource("PhysicsMaterial_sb12i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2(-52.4621, -6.88162)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_sb12i")
 
 [node name="ColorRect" type="ColorRect" parent="StaticBody2D2"]
