@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://buk7ahb3h7rtm"]
+
+[ext_resource type="Script" uid="uid://b0dxl81wo0rpv" path="res://addons/dialogic/Editor/dialogic_editor.gd" id="1_031k3"]
+[ext_resource type="Script" uid="uid://dgny6vdsytx3b" path="res://lvl_2.gd" id="1_dbx23"]
+
+[node name="lvl2" type="Node2D"]
+script = ExtResource("1_dbx23")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 209.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 40
+text = "Das ist lvl2
+"
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="DialogicEditor" type="Control" parent="Node2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 78.0
+offset_top = 127.0
+offset_right = 118.0
+offset_bottom = 167.0
+scale = Vector2(5.7925, 5.46554)
+script = ExtResource("1_031k3")
+metadata/_custom_type_script = "uid://b0dxl81wo0rpv"
