@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=4 format=3 uid="uid://cin6dfu7f2u1j"]
+
+[ext_resource type="Script" uid="uid://rwobrjdysauv" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_qtfed"]
+[ext_resource type="Script" uid="uid://b6nqfpasuwecj" path="res://addons/dialogic/Resources/dialogic_style.gd" id="2_3m5fc"]
+
+[sub_resource type="Resource" id="Resource_bf7rv"]
+script = ExtResource("1_qtfed")
+overrides = {
+"global_font_size": "50.0"
+}
+
+[resource]
+script = ExtResource("2_3m5fc")
+name = "fontsize 2"
+layer_list = Array[String]([])
+layer_info = {
+"": SubResource("Resource_bf7rv")
+}
+base_overrides = {}
+layers = Array[ExtResource("1_qtfed")]([])
+metadata/_latest_layer = ""

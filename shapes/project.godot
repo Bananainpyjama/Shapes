@@ -24,11 +24,13 @@ directories/dch_directory={
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
-"timelinelvl1": "res://assets/timelinelvl1.dtl"
+"counter": "res://assets/counter.dtl",
+"timelinelvl1": "res://assets/timelinelvl1.dtl",
+"timelinelvl2": "res://assets/timelinelvl2.dtl"
 }
 variables={}
-layout/style_list=[]
-layout/default_style="Default"
+layout/style_list=["", "res://assets/CustomFontsize/fontsize.tres"]
+layout/default_style=""
 glossary/default_case_sensitive=true
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.005
