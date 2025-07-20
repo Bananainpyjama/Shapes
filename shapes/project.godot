@@ -54,6 +54,12 @@ save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
 
+[display]
+
+window/size/viewport_width=500
+window/size/viewport_height=900
+window/size/resizable=false
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
@@ -101,4 +107,4 @@ dialogic_default_action={
 
 [physics]
 
-2d/default_gravity=0.0
+2d/default_gravity=40.0
