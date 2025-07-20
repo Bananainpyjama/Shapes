@@ -1,9 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://bw8a2amchbk75"]
+[gd_scene load_steps=6 format=3 uid="uid://bw8a2amchbk75"]
 
 [ext_resource type="Script" uid="uid://dp3w2t2q8r71w" path="res://projectile.gd" id="1_a85iw"]
 [ext_resource type="Texture2D" uid="uid://ty6u8mo4xi7t" path="res://assets/circle_light.png" id="2_qxf0c"]
+[ext_resource type="Script" uid="uid://csplf44724uho" path="res://MyHitbox.gd" id="3_dgwo2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a85iw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sxmqc"]
+radius = 16.0
 
 [node name="Projectile" type="RigidBody2D"]
 collision_layer = 2
@@ -29,5 +33,12 @@ energy = 0.1
 shadow_enabled = true
 texture = ExtResource("2_qxf0c")
 texture_scale = 3.0
+
+[node name="MyHitbox" type="Area2D" parent="."]
+script = ExtResource("3_dgwo2")
+metadata/_custom_type_script = "uid://csplf44724uho"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MyHitbox"]
+shape = SubResource("CircleShape2D_sxmqc")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

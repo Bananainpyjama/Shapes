@@ -3,9 +3,11 @@
 [ext_resource type="Script" uid="uid://brg1177lacglw" path="res://lvl_1.gd" id="1_6mpcb"]
 [ext_resource type="Script" uid="uid://b0dxl81wo0rpv" path="res://addons/dialogic/Editor/dialogic_editor.gd" id="3_jschv"]
 [ext_resource type="PackedScene" uid="uid://dg1lpt5fchmd7" path="res://goal.tscn" id="3_okdh5"]
-[ext_resource type="PhysicsMaterial" uid="uid://bpfh6ugqa4kha" path="res://new_physics_material.tres" id="3_t6wp4"]
 [ext_resource type="PackedScene" uid="uid://c2ewqas2fpf26" path="res://player.tscn" id="4_okdh5"]
 [ext_resource type="PackedScene" uid="uid://blvfanyyitu2o" path="res://enemy_spawner.tscn" id="6_t6wp4"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_clg6b"]
+bounce = 1.15
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_8t7b0"]
 b = Vector2(496, 0)
@@ -43,12 +45,16 @@ script = ExtResource("3_jschv")
 metadata/_custom_type_script = "uid://b0dxl81wo0rpv"
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 497.0
-offset_bottom = 896.0
-color = Color(0.39, 0.532333, 1, 1)
+offset_left = -24.0
+offset_top = -24.0
+offset_right = 512.0
+offset_bottom = 920.0
+color = Color(0.617852, 0.918499, 0.974025, 1)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-physics_material_override = ExtResource("3_t6wp4")
+collision_layer = 3
+collision_mask = 3
+physics_material_override = SubResource("PhysicsMaterial_clg6b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("SegmentShape2D_8t7b0")
@@ -69,7 +75,7 @@ position = Vector2(250, 128)
 position = Vector2(240, 856)
 
 [node name="enemy_spawner" parent="." instance=ExtResource("6_t6wp4")]
-position = Vector2(128, 264)
+position = Vector2(64, 192)
 amount = 4
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]

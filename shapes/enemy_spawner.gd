@@ -7,7 +7,7 @@ var enemy_scene = preload("res://enemy.tscn")
 func _ready() -> void:
 	for i in range(amount):
 		var instance = enemy_scene.instantiate()
-		instance.position = position + Vector2(i * 60, 0)
+		instance.position = position + Vector2(i * 80, 0)
 		add_child(instance)
 
 

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Shapes"
-run/main_scene="uid://dhumets3bhljv"
+run/main_scene="uid://lib5oy5xy3uf"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -55,6 +55,7 @@ choices/reveal_by_input=false
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
+timer/process_in_physics=true
 
 [display]
 

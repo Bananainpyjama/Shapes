@@ -19,7 +19,8 @@ func take_damage(hitbox):
 		queue_free()
 	else:
 		var force := Vector2(global_position-hitbox.global_position).normalized()
-		apply_impulse(force * hitbox.stagger)
+		#apply_impulse(force * hitbox.stagger)
+		$AudioStreamPlayer2D.play()
 		print("hit")
 
 func _ready() -> void:
