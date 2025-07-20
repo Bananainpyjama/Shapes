@@ -10,8 +10,8 @@ var power =  100000
 
 func _physics_process(delta: float) -> void:
 	var x_dir := Input.get_axis("left", "right")
-	var y_dir := Input.get_axis("up", "down")
-	var dir = Vector2(x_dir,y_dir).normalized()
+	#var y_dir := Input.get_axis("up", "down")
+	var dir = Vector2(x_dir,0).normalized()
 	
 	if Input.is_action_pressed("shoot") and not cooldown:
 		var shoot_dir = get_viewport().get_mouse_position() - global_position #get_viewport_rect().size/2

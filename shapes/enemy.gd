@@ -3,7 +3,7 @@ extends RigidBody2D
 var colors = [Color.CORNFLOWER_BLUE,Color.HOT_PINK,Color.DARK_GOLDENROD,Color.SEA_GREEN]
 var rotation_speed = 0.1
 var poly
-var n_points
+@export var n_points : int = 4
 
 func get_ngon(n,radius):
 	var step = (2*PI) / n
@@ -23,7 +23,8 @@ func take_damage(hitbox):
 		print("hit")
 
 func _ready() -> void:
-	n_points = randi_range(3,6)
+	#if n_points == null:
+	#	n_points = randi_range(3,6)
 	poly = Polygon2D.new()
 	add_child(poly)
 	var points = get_ngon(n_points,50)

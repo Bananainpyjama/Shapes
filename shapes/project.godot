@@ -108,4 +108,4 @@ dialogic_default_action={
 
 [physics]
 
-2d/default_gravity=40.0
+2d/default_gravity=200.0
