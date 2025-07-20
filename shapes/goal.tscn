@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dg1lpt5fchmd7"]
+
+[ext_resource type="Script" uid="uid://dmm6bnd3t4uay" path="res://goal.gd" id="1_0qle8"]
+[ext_resource type="Script" uid="uid://csplf44724uho" path="res://MyHitbox.gd" id="2_p20yd"]
+[ext_resource type="Texture2D" uid="uid://ty6u8mo4xi7t" path="res://assets/circle_light.png" id="3_p20yd"]
+
+[node name="Goal" type="Node2D" groups=["goals"]]
+script = ExtResource("1_0qle8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+
+[node name="MyHitbox" type="Area2D" parent="."]
+script = ExtResource("2_p20yd")
+stagger = 1000
+metadata/_custom_type_script = "uid://csplf44724uho"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MyHitbox"]
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+energy = 0.3
+shadow_enabled = true
+shadow_filter = 1
+shadow_filter_smooth = 0.1
+texture = ExtResource("3_p20yd")
+texture_scale = 8.96
+height = 100.0
